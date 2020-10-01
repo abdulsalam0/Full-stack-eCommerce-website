@@ -1,5 +1,9 @@
 import React from "react";
+
+//Bootstrap
 import { Card } from "react-bootstrap";
+
+//Components
 import Rating from "./Rating";
 
 const Product = ({ product }) => {

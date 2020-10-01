@@ -1,5 +1,9 @@
 import React from "react";
+
+//Bootstrap
 import { Col, Row } from "react-bootstrap";
+
+//Components 
 import Product from "../components/Product";
 import products from "../util/products";
 
