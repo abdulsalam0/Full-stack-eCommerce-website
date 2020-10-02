@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Full Stack MERN Application",
   "main": "index.js",
+  "type":"module",
   "scripts": {
     "start": "node backend/server",
     "server": "nodemon backend/server",
