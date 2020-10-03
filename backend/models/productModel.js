@@ -22,7 +22,7 @@ const productSchema = mongoose.Schema(
   {
     // ref is used to create a link(join) between the User
     // model ObjectId and the product model ObjectId
-    User: {
+    user: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
       ref: "User",
