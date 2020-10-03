@@ -3,7 +3,7 @@ import {
   PRODUCT_LIST_SUCCESS,
   PRODUCT_LIST_FAIL,
 } from "../constants/productConstants";
-export const productListReducer = (state = { product: [] }, action) => {
+export const productListReducer = (state = { products: [] }, action) => {
   // Checks the action status type
   switch (action.type) {
     // When its  making  the request
