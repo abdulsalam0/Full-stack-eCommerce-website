@@ -5,6 +5,9 @@ import connectDB from "./config/db.js";
 
 import productRoutes from "./routes/productRoutes.js";
 
+//importing middleware
+import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
+
 // Setting env file
 dotenv.config();
 
@@ -19,6 +22,12 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/products", productRoutes);
+
+// handles all false URLs
+app.use(notFound);
+
+//  catch all err request and responses with error and stack message
+app.use(errorHandler);
 
 const NODE_ENV = process.env.NODE_ENV;
 const PORT = process.env.PORT || 5000;
