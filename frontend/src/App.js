@@ -17,6 +17,7 @@ function App() {
       <main className='py-1'>
         <Container>
           <div className='py-4'>
+            {/* checking the path and returning component  */}
             <Route path='/' component={HomeScreen} exact />
             <Route path='/product/:id' component={ProductScreen} />
           </div>
