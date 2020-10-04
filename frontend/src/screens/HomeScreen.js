@@ -9,6 +9,8 @@ import { Col, Row } from "react-bootstrap";
 
 //Components
 import Product from "../components/Product";
+import Message from "../components/Message";
+import Loader from "../components/Loader";
 
 const HomeScreen = () => {
   //set  dispatcher
@@ -23,14 +25,13 @@ const HomeScreen = () => {
     dispatch(listProducts());
   }, [dispatch]);
 
-  console.log(products, "wassup");
   return (
     <>
       <h1>Latest Products</h1>
       {loading ? (
-        <h3>Loading...</h3>
+        <Loader />
       ) : error ? (
-        <h3>{error}</h3>
+        <Message variant='danger'>{error}</Message>
       ) : (
         <Row>
           {products.map((product) => (
